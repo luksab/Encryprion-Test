@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ initKeyPair()
+comment1.params=
+comment1.target=java.security.KeyPair\ LoadKeyPair()
+comment2.params=keyPair
+comment2.target=void\ SaveKeyPair(java.security.KeyPair)
+comment3.params=
+comment3.target=RSA()
+comment4.params=plaintext
+comment4.target=byte[]\ encrypt(byte[])
+comment5.params=chiperBytes
+comment5.target=byte[]\ decrypt(byte[])
+comment6.params=keyPair
+comment6.target=void\ dumpKeyPair(java.security.KeyPair)
+comment7.params=b
+comment7.target=java.lang.String\ getHexString(byte[])
+numComments=8

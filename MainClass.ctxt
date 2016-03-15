@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=MainClass()
+comment1.params=
+comment1.target=void\ test()
+comment2.params=
+comment2.target=byte[]\ randByte()
+comment3.params=
+comment3.target=byte[]\ NOTrandByte()
+comment4.params=text
+comment4.target=java.lang.String\ ByToSt(byte[])
+comment5.params=text
+comment5.target=byte[]\ StToBy(java.lang.String)
+numComments=6
