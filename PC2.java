@@ -1,5 +1,6 @@
 import java.security.*;
 import java.util.Base64;
+import java.nio.charset.StandardCharsets;
 public class PC2
 {
     RSA rsa;
@@ -25,10 +26,10 @@ public class PC2
     }
     
     public String ByToSt(byte[] text){
-        return new String(Base64.getEncoder().encode(text));
+        return new String(text);
     }
 
     public byte[] StToBy(String text){
-        return Base64.getDecoder().decode(text.getBytes());
+        return text.getBytes(StandardCharsets.UTF_8);
     }
 }
