@@ -6,7 +6,7 @@ import java.security.spec.*;
 
 public class RSA {
 
-    private static KeyPair keyPair;
+    public static KeyPair keyPair;
     public static final String PRIVATE_KEY_FILE = "C:/keys/private.key";
     public static final String PUBLIC_KEY_FILE = "C:/keys/public.key";
 
@@ -70,11 +70,11 @@ public class RSA {
 	}
 
     public RSA() throws Exception {
-        try{
+        /*try{
             keyPair = LoadKeyPair();
         }
         catch(Exception e)
-        {initKeyPair();}
+        {*/initKeyPair();/*}*/
         dumpKeyPair(keyPair);
     }
 
@@ -83,6 +83,15 @@ public class RSA {
 
         // ENCRYPT using the PUBLIC key
         cipher.init(Cipher.ENCRYPT_MODE, keyPair.getPublic());
+        byte[] encryptedBytes = cipher.doFinal(plaintext);
+        return encryptedBytes;
+    }
+    
+    public byte[] encrypt(byte[] plaintext, PublicKey PublicKey) throws Exception {
+        final Cipher cipher = Cipher.getInstance("RSA");
+
+        // ENCRYPT using the PUBLIC key
+        cipher.init(Cipher.ENCRYPT_MODE, PublicKey);
         byte[] encryptedBytes = cipher.doFinal(plaintext);
         return encryptedBytes;
     }

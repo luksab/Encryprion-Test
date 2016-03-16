@@ -9,12 +9,6 @@ import java.util.Base64;
 
 public class AES {
     private SecretKeySpec secret;
-    public AES(String keyStr) throws Exception {
-        byte[] key = (keyStr).getBytes("UTF-8");
-        MessageDigest sha = MessageDigest.getInstance("MD5");
-        key = sha.digest(key);
-        secret = new SecretKeySpec(key, "AES");
-    }
     
     public AES(byte[] key) throws Exception {
         MessageDigest sha = MessageDigest.getInstance("MD5");
