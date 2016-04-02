@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=HttpMirror()
+comment1.params=
+comment1.target=byte[]\ randByte()
+comment2.params=s
+comment2.target=void\ send(java.lang.String)
+comment3.params=text
+comment3.target=java.lang.String\ ByToSt(byte[])
+comment4.params=text
+comment4.target=byte[]\ StToBy(java.lang.String)
+numComments=5
