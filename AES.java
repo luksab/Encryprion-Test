@@ -12,7 +12,7 @@ public class AES {
 
     public AES(byte[] key){
         try{
-            MessageDigest sha = MessageDigest.getInstance("MD5");
+            MessageDigest sha = MessageDigest.getInstance("SHA-256");
             key = sha.digest(key);
             secret = new SecretKeySpec(key, "AES");
             System.out.println(""+secret);}

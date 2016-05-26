@@ -7,8 +7,9 @@ import java.security.spec.*;
 public class RSA {
 
     public static KeyPair keyPair;
-    public static final String PRIVATE_KEY_FILE = "C:/keys/private.key";
-    public static final String PUBLIC_KEY_FILE = "C:/keys/public.key";
+    public static final String PRIVATE_KEY_FILE = System.getProperty("user.home")+"/keys/private.key";
+    public static final String PUBLIC_KEY_FILE = System.getProperty("user.home")+"/keys/public.key";
+    public static File dir = new File(System.getProperty("user.home")+"/keys/");
 
     public void initKeyPair() throws Exception {
         try {
@@ -51,6 +52,7 @@ public class RSA {
     }
     
     public void SaveKeyPair(KeyPair keyPair) throws IOException {
+        dir.mkdir();
 		PrivateKey privateKey = keyPair.getPrivate();
 		PublicKey publicKey = keyPair.getPublic();
  
